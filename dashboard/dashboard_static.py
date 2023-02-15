@@ -71,8 +71,8 @@ if ac == "Forex":
     if os.path.isfile(ac + ch + ".csv"):
         df = pd.read_csv(ac + ch + ".csv")
     else:
-        #df = get_fx_csv(ch)
-        df=pd.read_csv('forex.csv')
+        df = get_fx_csv(ch)
+       # df=pd.read_csv('forex.csv')
         print("pulling")
         time.sleep(3)
         df.to_csv(ac + ch + ".csv", index=False)
@@ -81,8 +81,8 @@ else:
     if os.path.isfile(ac + ch + ".csv"):
         df = pd.read_csv(ac + ch + ".csv")
     else:
-        #df = get_crypt_csv(ch)
-        df=pd.read_csv('crypto.csv')
+        df = get_crypt_csv(ch)
+        #df=pd.read_csv('crypto.csv')
         print("pulling")
 
         time.sleep(3)
